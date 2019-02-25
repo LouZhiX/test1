@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{booklist.btitle}}</h1>
+    <p>书中存在的英雄人物：</p>
+    <ol>
+        {% for hero in heros%}
+            {{hero.hname}} -- {{hero.hmajor}} <br>
+        {% empty %}
+            <p>数据中无英雄</p>
+        {% endfor %}
+
+    </ol>
+
+</body>
+</html>
